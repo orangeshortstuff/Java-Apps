@@ -49,11 +49,9 @@ public class Week02
             System.out.println("Your grade is Upper Second Class");
         }
 
-        
         else if(mark >= LOWER_SECOND_MARK) {
             System.out.println("Your grade is Lower Second Class");
         }
-
         
         else if(mark >= THIRD_MARK) {
             System.out.println("Your grade is Third Class");
@@ -66,7 +64,6 @@ public class Week02
         else {
             System.out.println("You didn't submit any work");
         }
-
     }
 
     private static void doConvertGrade()
