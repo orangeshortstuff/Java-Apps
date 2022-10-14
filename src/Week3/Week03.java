@@ -28,7 +28,8 @@ public class Week03
     public static void enrolStudent()
     {
         enrollee.enrol(myCourse);
-        System.out.println(enrollee.getCourse());
+        Course studentCourse = enrollee.getCourse();
+        System.out.println(enrollee.studentCourse.getTitle() + " (" + enrollee.studentCourse.getCode() + ")");
     }
 
     public static void createCourse()
