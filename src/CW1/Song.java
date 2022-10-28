@@ -5,14 +5,14 @@ public class Song {
     private int id;
     private String artist;
     private String title;
-    private String streams;
+    private int playCount;
 
-    public Song(int id, String artist, String title, String streams)
+    public Song(String title, String artist, int playCount, int id)
     {
         this.id = id;
         this.artist = artist;
         this.title = title;
-        this.streams = streams;
+        this.playCount = playCount;
     }
 
     public int getID()
@@ -30,13 +30,13 @@ public class Song {
         return title;
     }
 
-    public String getStreams()
+    public int getplayCount()
     {
-        return streams;
+        return playCount;
     }
 
     public void print()
     {
-        System.out.println("" + id + " " + artist + " " + title + " " + streams);
+        System.out.println("Title: " + title + " Artist: " + artist + " Plays: " + playCount + " ID: " + id);
     }
 }
