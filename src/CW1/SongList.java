@@ -106,7 +106,7 @@ public class SongList
         System.out.println("\nPrinting popular songs\n");
         for (Song song : songs)
         {
-            if (song.getplayCount() >= lowestStreamCount)
+            if (song.getPlayCount() >= lowestStreamCount)
             {
                 song.print();
             }
