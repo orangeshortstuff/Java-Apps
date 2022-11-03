@@ -76,10 +76,35 @@ public class SongList
      */
     private void deleteSong() 
     {   
+        System.out.println("Removing a song");
         int id = InputReader.getInt("Enter the ID of the song to be deleted > ");
-        if (id == findSongID(id)) // find the song with the same id, and then retrieve it if there is one
-        { 
-            songs.remove(id);
+        if (id < 0) {
+            System.out.println("ID cannot be negative");
+            return;
+        }
+        if (id == findSongID(id)) // find if there is a song with the ID entered
+        {   
+            // to prevent a bug, look for the song with that ID, and remove that index
+            int songIndex = 0;
+            boolean found = false;
+            Song deadSong = songs.get(songIndex);
+            while (!found)
+            {
+                if (deadSong.getID() == id)
+                {
+                    System.out.println("Removed " + deadSong.getTitle() + " by " + deadSong.getArtist() + " from the list.");
+                    songs.remove(songIndex);
+                    found = true;
+                }
+                else
+                {
+                    songIndex++;
+                    deadSong = songs.get(songIndex);
+                }
+            }
+        }
+        else {
+            System.out.println("Song with ID " + id + " not found.");
         }
     }
 

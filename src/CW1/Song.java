@@ -33,13 +33,13 @@ public class Song {
         return playCount;
     }
 
-    // get the name of the artist who made the song - currently unused
+    // get the name of the artist who made the song
     public String getArtist()
     {
         return artist;
     }
 
-    // get the title of the song - currently unused
+    // get the title of the song
     public String getTitle()
     {
         return title;
