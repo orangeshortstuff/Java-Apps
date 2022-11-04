@@ -144,11 +144,19 @@ public class SongList
     */
     private void addDefaultSongs()
     {
-        Song song = new Song("Pool", "Tricot", 704382, 0);
+        Song song = new Song("Pool", "Tricot", 2152394, 0);
         songs.add(song);
 
-        song = new Song("Never Meant", "American Football", 1204956, 1);
+        song = new Song("Never Meant", "American Football", 5789672, 1);
         songs.add(song);
+        
+/* space to add new songs post-testing
+        song = new Song("Pork Ginger", "Tricot", 25463, 2);
+        songs.add(song);
+
+        song = new Song("Harder, Better, Faster, Stronger", "Daft Punk", 119979966, 2);
+        songs.add(song);
+*/
     }
 
     private void openMainMenu()
