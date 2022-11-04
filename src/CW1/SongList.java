@@ -150,13 +150,29 @@ public class SongList
         song = new Song("Never Meant", "American Football", 5789672, 1);
         songs.add(song);
         
-/* space to add new songs post-testing
         song = new Song("Pork Ginger", "Tricot", 25463, 2);
         songs.add(song);
 
-        song = new Song("Harder, Better, Faster, Stronger", "Daft Punk", 119979966, 2);
+        song = new Song("Harder, Better, Faster, Stronger", "Daft Punk", 119979966, 3);
         songs.add(song);
-*/
+
+        song = new Song("Yume Utsutsu", "Lamp", 6144363, 4);
+        songs.add(song);
+
+        song = new Song("Ares", "Covet", 57240, 5);
+        songs.add(song);
+
+        song = new Song("Swimming Pools (Drank)", "Kendrick Lamar", 146066924, 6);
+        songs.add(song);
+
+        song = new Song("Rapp Snitch Knishes", "MF DOOM", 13640175, 7);
+        songs.add(song);
+
+        song = new Song("HUMBLE.", "Kendrick Lamar", 880961855, 8);
+        songs.add(song);
+
+        song = new Song("Dirty Boy", "Cardiacs", 24784, 9);
+        songs.add(song);
     }
 
     private void openMainMenu()
