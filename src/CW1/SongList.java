@@ -177,6 +177,12 @@ public class SongList
         songs.add(song);
     }
 
+
+    /**  
+     * This method runs the main menu for the program.
+     * From here, the user can select which feature they want to use
+     * as well as exit the program.
+    */
     private void openMainMenu()
     {
         boolean quitting = false;

@@ -7,8 +7,7 @@ public class CW1 {
         System.out.println("CO450 Programming Concepts: CW1");
         System.out.println("==================================");
         System.out.println();
-        System.out.println("Music streaming service emulator");
-        System.out.println();
+        System.out.println("Music Streaming Service Emulator");
         System.out.println("Written by Alexander Walker");
         System.out.println();
 
