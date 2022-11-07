@@ -111,7 +111,7 @@ public class SongList
         }
     }
 
-    /*
+    /**
      * This method prints every song object in the array
     */
     private void printSongs()
@@ -124,7 +124,7 @@ public class SongList
         }
     }
 
-    /*
+    /**
      * This method prints every song object in the array
      * with the same or more than a given amount of plays
     */
@@ -144,7 +144,6 @@ public class SongList
     /*
     * This method adds songs before the main menu first runs.
     */
-
     private void addDefaultSongs()
     {
         Song song = new Song("Pool", "Tricot", 2152394, 0);
