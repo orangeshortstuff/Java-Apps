@@ -24,6 +24,22 @@ public class SongList
     }
 
     /**
+     * This method will check if the list
+     * contains a song with the given ID
+    */
+    private int findSongID(int id)
+    {
+        for (Song song : songs)
+        {
+            if (song.getID() == id)
+            {
+                return id;
+            }
+        }
+        return -1; // if the song does not exist
+    }
+
+    /**
      * This method will ask the user for the song's
      * title, the artist, and how many times
      * it's been played
@@ -48,26 +64,10 @@ public class SongList
                 id++;
             }
         }
-
+        // and create the song once it's done
         Song song = new Song(title, artist, playCount, id);
         songs.add(song);
         System.out.println(title + " by " + artist + " has been added with ID " + id);
-    }
-
-    /**
-     * This method will check if the list
-     * contains a song with the given ID
-    */
-    private int findSongID(int id)
-    {
-        for (Song song : songs)
-        {
-            if (song.getID() == id)
-            {
-                return id;
-            }
-        }
-        return -1;
     }
 
     /**
@@ -78,32 +78,35 @@ public class SongList
     {   
         System.out.println("Removing a song");
         int id = InputReader.getInt("Enter the ID of the song to be deleted > ");
+        
+        // break early on a negative ID
         if (id < 0) {
             System.out.println("ID cannot be negative");
             return;
         }
         if (id == findSongID(id)) // find if there is a song with the ID entered
         {   
-            // to prevent a bug, look for the song with that ID, and remove that index
+            /* to prevent a bug, look for the song with that ID, and remove that index
+            (because if this triggers, the ID is used) */
             int songIndex = 0;
             boolean found = false;
             Song deadSong = songs.get(songIndex);
             while (!found)
             {
-                if (deadSong.getID() == id)
+                if (deadSong.getID() == id) // remove when the ID is found
                 {
                     System.out.println("Removed " + deadSong.getTitle() + " by " + deadSong.getArtist() + " from the list.");
                     songs.remove(songIndex);
                     found = true;
                 }
-                else
+                else // else increment the index
                 {
                     songIndex++;
                     deadSong = songs.get(songIndex);
                 }
             }
         }
-        else {
+        else { // if the ID isn't used, tell the user
             System.out.println("Song with ID " + id + " not found.");
         }
     }
@@ -127,7 +130,7 @@ public class SongList
     */
     private void printPopularSongs()
     {
-        int lowestStreamCount = InputReader.getInt("What is the minimum amount of plays? > ");
+        int lowestStreamCount = InputReader.getInt("Input the minimum play count for songs to be outputted > ");
         System.out.println("\nPrinting popular songs\n");
         for (Song song : songs)
         {
@@ -138,10 +141,10 @@ public class SongList
         }
     }
 
-    /* This method adds songs before the main menu kicks in.
-     * Used for testing the functions of the program
-     * without having to add them in every time.
+    /*
+    * This method adds songs before the main menu first runs.
     */
+
     private void addDefaultSongs()
     {
         Song song = new Song("Pool", "Tricot", 2152394, 0);
