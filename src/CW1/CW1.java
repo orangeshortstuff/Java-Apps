@@ -1,5 +1,9 @@
 package CW1;
 
+/*
+ * This class will run the application
+ */
+
 public class CW1 {
     public static void main(String[] args)
     {
